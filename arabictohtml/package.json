@@ -2,10 +2,11 @@
   "name": "arabictohtml",
   "displayName": "arabictohtml",
   "description": "البرمجة باللغة العربية لعناصر الهوتمل",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.98.0"
   },
+  "publisher": "Arabic-language",
   "categories": [
     "Snippets"
   ],
@@ -21,13 +22,25 @@
     "color": "#007acc",
     "theme": "dark"
   },
-  "icon": "iarabictohtml.png",
+  "icon": "aiarabictohtml.png",
   "repository": {
     "type": "git",
     "url": "https://github.com/almhajer/ArabicToHtml.git"
   },
   "bugs": {
     "url": "https://github.com/almhajer/arabictohtml/issues"
+  },
+  "keywords": [
+    "Arabic",
+    "Localization",
+    "Language Pack",
+    "Translation",
+    "html",
+    "عربي",
+    "هوتمل بالعربي"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "Almhajer"
   }
 }
-
