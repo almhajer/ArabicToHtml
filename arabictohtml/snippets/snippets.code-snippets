@@ -1,0 +1,354 @@
+{
+    "Arabic html learn": {
+        "prefix": "صفحة",
+        "body": [
+            "<!DOCTYPE html>",
+            "<html lang='ar'>",
+            "<head>",
+            "    <meta charset='UTF-8'>",
+            "    <meta name='viewport' content='width=device-width, initial-scale=1.0'>",
+            " <title>${1:صفحة جديدة}</title>",
+            "</head>",
+            "<body>",
+            " ${2}",
+            "</body>",
+            "</html>"
+        ],
+        "description": "كتابة كود صفحة هوتمل",
+        "scope": "html"
+    },
+    "option:value": {
+        "prefix": "خصائص القيمة",
+        "body": [
+            "value=\"${1:قيمة افتراضية}\""
+        ],
+        "description": "إضافة قيمة للحقل"
+    },
+    "option:name": {
+        "prefix": "خصائص الاسم",
+        "body": [
+            "name=\"${1:قيمة افتراضية}\""
+        ],
+        "description": "إضافة اسم للحقل"
+    },
+    "option:class": {
+        "prefix": "خصائص الفئة",
+        "body": [
+            "class=\"${1:قيمة افتراضية}\""
+        ],
+        "description": "إضافة فئة (class) للحقل"
+    },
+    "option:id": {
+        "prefix": "خصائص المعرف",
+        "body": [
+            "id=\"${1:قيمة افتراضية}\""
+        ],
+        "description": "إضافة معرف (id) للحقل"
+    },
+    "option:style": {
+        "prefix": "خصائص النمط",
+        "body": [
+            "style=\"${1:قيمة افتراضية}\""
+        ],
+        "description": "إضافة نمط (style) للحقل"
+    },
+    "button:normal": {
+        "prefix": "زر",
+        "body": [
+            "<button>${1:زر}</button"
+        ],
+        "description": "اضافة زر هوتمل عادي من دون تنسيق",
+        "scope": "html"
+    },
+    "button": {
+        "prefix": "زر مع تنسيق",
+        "body": [
+            "<button name=\"${2:button}\" class=\"${5:|button,key,press|}\" id=\"button${3:1}\" style=\"${4:background-color:red}\">${1:زر}</button"
+        ],
+        "description": "اضافة زر هوتمل",
+        "scope": "html"
+    },
+    "button:multi": {
+        "prefix": "زر ارسال",
+        "body": [
+            "<button>${1|فتح,اضغط,الغاء,اغلاق,جديد,تحويل|}</button"
+        ],
+        "description": "اضافة زر هوتمل عادي من دون تنسيق",
+        "scope": "html"
+    },
+    "text:input": {
+        "prefix": "حقل نصي",
+        "body": [
+            "<input type=\"text\" name=\"${1:inputName}\" id=\"${2:inputId}\" placeholder=\"${3:اكتب هنا}\" />"
+        ],
+        "description": "إضافة حقل نصي هوتمل",
+        "scope": "html"
+    },
+    "text:option": {
+        "prefix": "حقل نصي مع خيارات",
+        "body": [
+            "<input type=\"text\" ${1|value,name,class,id,style|}=\"${2}\" />"
+        ],
+        "description": "إضافة حقل نصي HTML مع خيارات محددة",
+        "scope": "html"
+    },
+    "link": {
+        "prefix": "رابط",
+        "body": [
+            "<a href=\"${1:https://www.example.com}\" target=\"${2:_blank}\">${3:رابط}</a>"
+        ],
+        "description": "إضافة رابط هوتمل",
+        "scope": "html"
+    },
+    "image": {
+        "prefix": "صورة",
+        "body": [
+            "<img src=\"${1:https://www.example.com/image.jpg}\" alt=\"${2:صورة}\" />"
+        ],
+        "description": "إضافة صورة هوتمل",
+        "scope": "html"
+    },
+    "table": {
+        "prefix": "جدول عدد العناصر 2",
+        "body": [
+            "<table>",
+            "    <thead>",
+            "        <tr>",
+            "            <th>${1:العنوان}</th>",
+            "            <th>${2:العنوان}</th>",
+            "        </tr>",
+            "    </thead>",
+            "    <tbody>",
+            "        <tr>",
+            "            <td>${3:القيمة}</td>",
+            "            <td>${4:القيمة}</td>",
+            "        </tr>",
+            "    </tbody>",
+            "</table>"
+        ],
+        "description": "إضافة جدول هوتمل",
+        "scope": "html"
+    },
+    "list:ul": {
+        "prefix": "قائمة غير مرتبة",
+        "body": [
+            "<ul>",
+            "    <li>${1:العنصر}</li>",
+            "    <li>${2:العنصر}</li>",
+            "</ul>"
+        ],
+        "description": "إضافة قائمة غير مرتبة هوتمل",
+        "scope": "html"
+    },
+    "color:red": {
+        "prefix": "لون احمر",
+        "body": [
+            "color: red;"
+        ],
+        "description": "اللون الأحمر",
+        "scope": "css,html"
+    },
+    "color:blue": {
+        "prefix": "لون أزرق",
+        "body": [
+            "color: blue;"
+        ],
+        "description": "اللون الأزرق",
+        "scope": "css,html"
+    },
+    "color:green": {
+        "prefix": "لون أخضر",
+        "body": [
+            "color: green;"
+        ],
+        "description": "اللون الأخضر",
+        "scope": "css,html"
+    },
+    "color:yellow": {
+        "prefix": "لون أصفر",
+        "body": [
+            "color: yellow;"
+        ],
+        "description": "اللون الأصفر",
+        "scope": "css,html"
+    },
+    "color:black": {
+        "prefix": "لون أسود",
+        "body": [
+            "color: black;"
+        ],
+        "description": "اللون الأسود",
+        "scope": "css,html"
+    },
+    "color:white": {
+        "prefix": "لون أبيض",
+        "body": [
+            "color: white;"
+        ],
+        "description": "اللون الأبيض",
+        "scope": "css,html"
+    },
+    "color:gray": {
+        "prefix": "لون رمادي",
+        "body": [
+            "color: gray;"
+        ],
+        "description": "اللون الرمادي",
+        "scope": "css,html"
+    },
+    "color:purple": {
+        "prefix": "لون بنفسجي",
+        "body": [
+            "color: purple;"
+        ],
+        "description": "اللون البنفسجي",
+        "scope": "css,html"
+    },
+    "color:orange": {
+        "prefix": "لون برتقالي",
+        "body": [
+            "color: orange;"
+        ],
+        "description": "اللون البرتقالي",
+        "scope": "css,html"
+    },
+    "color:pink": {
+        "prefix": "لون وردي",
+        "body": [
+            "color: pink;"
+        ],
+        "description": "اللون الوردي",
+        "scope": "css,html"
+    },
+    "color:brown": {
+        "prefix": "لون بني",
+        "body": [
+            "color: brown;"
+        ],
+        "description": "اللون البني",
+        "scope": "css,html"
+    },
+    "color:cyan": {
+        "prefix": "لون سماوي",
+        "body": [
+            "color: cyan;"
+        ],
+        "description": "اللون السماوي",
+        "scope": "css,html"
+    },
+    "color:magenta": {
+        "prefix": "لون أرجواني",
+        "body": [
+            "color: magenta;"
+        ],
+        "description": "اللون الأرجواني",
+        "scope": "css,html"
+    },
+    "color:lime": {
+        "prefix": "لون ليموني",
+        "body": [
+            "color: lime;"
+        ],
+        "description": "اللون الليموني",
+        "scope": "css,html"
+    },
+    "color:gold": {
+        "prefix": "لون ذهبي",
+        "body": [
+            "color: gold;"
+        ],
+        "description": "اللون الذهبي",
+        "scope": "css,html"
+    },
+    "color:silver": {
+        "prefix": "لون فضي",
+        "body": [
+            "color: silver;"
+        ],
+        "description": "اللون الفضي",
+        "scope": "css,html"
+    },
+    "color:navy": {
+        "prefix": "لون كحلي",
+        "body": [
+            "color: navy;"
+        ],
+        "description": "اللون الكحلي",
+        "scope": "css,html"
+    },
+    "color:olive": {
+        "prefix": "لون زيتوني",
+        "body": [
+            "color: olive;"
+        ],
+        "description": "اللون الزيتوني",
+        "scope": "css,html"
+    },
+    "color:teal": {
+        "prefix": "لون تركواز",
+        "body": [
+            "color: teal;"
+        ],
+        "description": "اللون التركواز",
+        "scope": "css,html"
+    },
+    "color:maroon": {
+        "prefix": "لون خمري",
+        "body": [
+            "color: maroon;"
+        ],
+        "description": "اللون الخمري",
+        "scope": "css,html"
+    },
+    "color:beige": {
+        "prefix": "لون بيج",
+        "body": [
+            "color: beige;"
+        ],
+        "description": "اللون البيج",
+        "scope": "css,html"
+    },
+    "div": {
+        "prefix": "حاوية",
+        "body": [
+            "<div style=\"width: ${1:200}px; height: ${2:100}px; background-color: ${3:lightgray};\">",
+            "    ${4:محتوى القسم}",
+            "</div>"
+        ],
+        "description": "إضافة عنصر div مع عرض وارتفاع وخلفية",
+        "scope": "html"
+    },
+    "span": {
+        "prefix": "نص",
+        "body": [
+            "<span style=\"font-family: ${1:Arial}; font-size: ${2:16}px; font-weight: ${3:normal}; color: ${4:black};\">",
+            "    ${5:نص هنا}",
+            "</span>"
+        ],
+        "description": "إضافة نص مع تنسيق الخط في HTML",
+        "scope": "html"
+    },
+    "p": {
+        "prefix": "فقرة",
+        "body": [
+            "<p style=\"font-size: ${1:16}px; color: ${2:black}; text-align: ${3:left}; line-height: ${4:1.5};\">",
+            "    ${5:نص الفقرة هنا}",
+            "</p>"
+        ],
+        "description": "إضافة عنصر p مع تنسيق الخط واللون والمحاذاة"
+    },
+    "hr:html": {
+        "prefix": "فاصل",
+        "body": [
+            "<hr style=\"width: ${1:100%}; height: ${2:2}px; background-color: ${3:#000}; border: none; margin: ${4:10}px 0;\">"
+        ],
+        "description": "إضافة خط فاصل hr مع تنسيق العرض والارتفاع واللون"
+    },
+    "input:password": {
+        "prefix": "حقل رقم سري",
+        "body": [
+            "<input type=\"password\" name=\"${1:password}\" id=\"${2:password}\" placeholder=\"${3:أدخل كلمة المرور}\" required>"
+        ],
+        "description": "إضافة حقل إدخال كلمة مرور"
+    }
+}
