@@ -17,6 +17,14 @@
         "description": "كتابة كود صفحة هوتمل",
         "scope": "html"
     },
+    "title:html": {
+        "prefix": "عنوان الصفحة",
+        "body": [
+            "<title>${1:عنوان الصفحة}</title>"
+        ],
+        "description": "إضافة عنصر title لتحديد عنوان الصفحة في HTML",
+        "scope": "html"
+    },
     "option:value": {
         "prefix": "خصائص القيمة",
         "body": [
@@ -127,6 +135,26 @@
             "</table>"
         ],
         "description": "إضافة جدول هوتمل",
+        "scope": "html"
+    },
+    "table-row:html": {
+        "prefix": "صف جدول",
+        "body": [
+            "<tr>",
+            "    ${1:اضفة خلية البيانات}",
+            "</tr>"
+        ],
+        "description": "إضافة صف جدول (tr) مع خلايا بيانات (td) في HTML",
+        "scope": "html"
+    },
+    "table-td:html": {
+        "prefix": "جدول",
+        "body": [
+            "<td>",
+            "    ${1:البيانات الأولى}",
+            "</td>"
+        ],
+        "description": "إضافة صف جدول (tr) مع خلايا بيانات (td) في HTML",
         "scope": "html"
     },
     "list:ul": {
@@ -350,5 +378,177 @@
             "<input type=\"password\" name=\"${1:password}\" id=\"${2:password}\" placeholder=\"${3:أدخل كلمة المرور}\" required>"
         ],
         "description": "إضافة حقل إدخال كلمة مرور"
+    },
+    "video:html": {
+        "prefix": "فيديو",
+        "body": [
+            "<video width=\"${1:640}\" height=\"${2:360}\" controls>",
+            "    <source src=\"${3:video.mp4}\" type=\"${4:video/mp4}\">",
+            "    ${5:متصفحك لا يدعم تشغيل الفيديو.}",
+            "</video>"
+        ],
+        "description": "إضافة عنصر فيديو HTML مع خيارات العرض والتحكم",
+        "scope": "html"
+    },
+    "text:textarea": {
+        "prefix": "حقل نصي متعدد",
+        "body": [
+            "<textarea name=\"${1:textareaName}\" id=\"${2:textareaId}\" rows=\"${3:4}\" cols=\"${4:50}\" placeholder=\"${5:اكتب هنا}\">${6}</textarea>"
+        ],
+        "description": "إضافة حقل نصي متعدد الأسطر (textarea) في HTML",
+        "scope": "html"
+    },
+    "audio:html": {
+        "prefix": "مقطع صوتي",
+        "body": [
+            "<audio controls>",
+            "    <source src=\"${1:audio.mp3}\" type=\"${2:audio/mpeg}\">",
+            "    ${3:متصفحك لا يدعم تشغيل الصوت.}",
+            "</audio>"
+        ],
+        "description": "إضافة عنصر صوتي HTML مع خيارات التحكم",
+        "scope": "html"
+    },
+    "bold:text": {
+        "prefix": "نص عريض",
+        "body": [
+            "<b>${1:نص عريض هنا}</b>"
+        ],
+        "description": "إضافة نص عريض باستخدام عنصر b في HTML",
+        "scope": "html"
+    },
+    "blockquote:html": {
+        "prefix": "اقتباس",
+        "body": [
+            "<blockquote style=\"font-size: ${1:16}px; color: ${2:gray}; border-left: ${3:4px solid #ccc}; padding: ${4:10px}; margin: ${5:10px 0};\">",
+            "    ${6:نص الاقتباس هنا}",
+            "</blockquote>"
+        ],
+        "description": "إضافة عنصر اقتباس (blockquote) مع تنسيق HTML",
+        "scope": "html"
+    },
+    "form:html": {
+        "prefix": "نموذج",
+        "body": [
+            "<form action=\"${1:submit.php}\" method=\"${2:post}\" ${3:enctype=\"multipart/form-data\"}>",
+            "    <label for=\"${4:inputId}\">${5:اسم الحقل}</label>",
+            "    <input type=\"${6:text}\" name=\"${7:inputName}\" id=\"${4:inputId}\" placeholder=\"${8:اكتب هنا}\" />",
+            "    <button type=\"${9:submit}\">${10:إرسال}</button>",
+            "</form>"
+        ],
+        "description": "إضافة نموذج HTML مع حقل إدخال وزر إرسال",
+        "scope": "html"
+    },
+    "h1:html": {
+        "prefix": "عنوان",
+        "body": [
+            "<h1 style=\"font-size: ${1:32}px; color: ${2:black}; text-align: ${3:left};\">",
+            "    ${4:عنوان هنا}",
+            "</h1>"
+        ],
+        "description": "إضافة عنصر عنوان (h1) مع تنسيق HTML",
+        "scope": "html"
+    },
+    "link:html": {
+        "prefix": "رابط ملف التنسيق",
+        "body": [
+            "<link rel=\"${1:stylesheet}\" href=\"${2:style.css}\" type=\"${3:text/css}\" />"
+        ],
+        "description": "إضافة عنصر link لربط ملف خارجي (مثل CSS)",
+        "scope": "html"
+    },
+    "script:js:type": {
+        "prefix": "جافا سكريبت",
+        "body": [
+            "<script type=\"${1|text/javascript,module|}\">",
+            "    ${2:// اكتب كود JavaScript هنا}",
+            "</script>"
+        ],
+        "description": "إضافة عنصر script مع تحديد نوع JavaScript (مثل module أو text/javascript)",
+        "scope": "html"
+    },
+    "select:html": {
+        "prefix": "قائمة منسدلة",
+        "body": [
+            "<select name=\"${1:selectName}\" id=\"${2:selectId}\">",
+            "    <option value=\"${3:option1Value}\">${4:الخيار الأول}</option>",
+            "    <option value=\"${5:option2Value}\">${6:الخيار الثاني}</option>",
+            "</select>"
+        ],
+        "description": "إضافة عنصر select مع خيارات option في HTML",
+        "scope": "html"
+    },
+    "option:html": {
+        "prefix": "خيار",
+        "body": [
+            "<option value=\"${1:القيمة}\">${2:النص}</option>"
+        ],
+        "description": "إضافة عنصر option داخل قائمة select",
+        "scope": "html"
+    },
+    "style:html": {
+        "prefix": "تنسيق",
+        "body": [
+            "<style>",
+            "    ${1:/* اكتب كود CSS هنا */}",
+            "</style>"
+        ],
+        "description": "إضافة عنصر style لتضمين CSS داخل HTML",
+        "scope": "html"
+    },
+    "script:external": {
+        "prefix": "رابط جافا سكريبت خارجي",
+        "body": [
+            "<script src=\"${1:script.js}\" type=\"${2:text/javascript}\"></script>"
+        ],
+        "description": "إضافة عنصر script لربط ملف JavaScript خارجي",
+        "scope": "html"
+    },
+    "menu:html": {
+        "prefix": "قائمة ",
+        "body": [
+            "<menu>",
+            "    <li>${1:العنصر الأول}</li>",
+            "    <li>${2:العنصر الثاني}</li>",
+            "</menu>"
+        ],
+        "description": "إضافة عنصر menu بسيط بدون روابط",
+        "scope": "html"
+    },
+    "list-item:html": {
+        "prefix": "عنصر قائمة",
+        "body": [
+            "<li>${1:العنصر}</li>"
+        ],
+        "description": "إضافة عنصر قائمة li في HTML",
+        "scope": "html"
+    },
+    "picture:html": {
+        "prefix": "صور بحسب مقاس المحدد",
+        "body": [
+            "<picture>",
+            "    <source srcset=\"${1:example-large.jpg}\" media=\"(min-width: ${2:800px})\">",
+            "    <source srcset=\"${3:example-medium.jpg}\" media=\"(min-width: ${4:400px})\">",
+            "    <img src=\"${5:example-small.jpg}\" alt=\"${6:وصف الصورة}\">",
+            "</picture>"
+        ],
+        "description": "إضافة عنصر picture لإنشاء صور متجاوبة",
+        "scope": "html"
+    },
+    "file-input:image": {
+        "prefix": "زر ادخال صورة",
+        "body": [
+            "<input type=\"file\" id=\"${1:poster}\" name=\"${2:poster}\" accept=\"${3:image/png, image/jpeg}\" />"
+        ],
+        "description": "إضافة عنصر إدخال لتحميل الصور بصيغة PNG أو JPEG",
+        "scope": "html"
+    },
+    "file-input:pdf": {
+        "prefix": "زر ادخال ملف PDF",
+        "body": [
+            "<input type=\"file\" id=\"${1:pdfFile}\" name=\"${2:pdfFile}\" accept=\"${3:application/pdf}\" />"
+        ],
+        "description": "إضافة عنصر إدخال لتحميل ملفات PDF",
+        "scope": "html"
     }
 }

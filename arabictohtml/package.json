@@ -1,8 +1,8 @@
 {
   "name": "arabictohtml",
-  "displayName": "arabictohtml",
+  "displayName": "Arabic to html",
   "description": "البرمجة باللغة العربية لعناصر الهوتمل",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "engines": {
     "vscode": "^1.98.0"
   },
@@ -32,10 +32,10 @@
   },
   "keywords": [
     "Arabic",
-    "Localization",
-    "Language Pack",
-    "Translation",
     "html",
+    "HTML",
+    "Translation",
+    "arabictohtml",
     "عربي",
     "هوتمل بالعربي"
   ],

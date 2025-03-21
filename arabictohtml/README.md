@@ -1,189 +1,695 @@
-# arabictohtml README
 
-إليك **قائمة الأوامر** التي تدعمها الإضافة بناءً على ملف السنابيت الذي قدمته:
+<style>
+    .command {
+        background-color: #f0f8ff;
+        color: #333;
+        font-weight: bold;
+        padding: 5px;
+        border-radius: 5px;
+        display: inline-block;
+    }
+</style>
+### الوصف:
 
----
+#### الأمر:
+<span class='command'>صفحة</span>
 
-### **📌 قائمة الأوامر المدعومة في الإضافة**
-#### **🔹 إنشاء صفحة HTML**
-📌 **الأمر:** `صفحة`  
-📝 **الوصف:** إنشاء هيكل أساسي لصفحة HTML باللغة العربية.  
-
----
-
-#### **🔹 إدراج خصائص HTML**  
-📌 **الأمر:**  
-- `خصائص القيمة` → إدراج `value=""`  
-- `خصائص الاسم` → إدراج `name=""`  
-- `خصائص الفئة` → إدراج `class=""`  
-- `خصائص المعرف` → إدراج `id=""`  
-- `خصائص النمط` → إدراج `style=""`  
-
-📝 **الوصف:** إدراج خصائص لعناصر HTML بسرعة.  
-
----
-
-#### **🔹 إضافة زر Button**  
-📌 **الأوامر:**  
-- `زر` → زر HTML عادي بدون تنسيق  
-- `زر مع تنسيق` → زر HTML مع خصائص `name, class, id, style`  
-- `زر ارسال` → زر HTML مع خيارات نصوص متعددة (`فتح`, `اضغط`, `إلغاء`...)  
-
-📝 **الوصف:** تسريع عملية إدراج الأزرار في الصفحة.  
-
----
-
-#### **🔹 إدراج حقول إدخال Input**  
-📌 **الأوامر:**  
-- `حقل نصي` → إدراج `<input type="text">` مع `name`, `id`, `placeholder`  
-- `حقل نصي مع خيارات` → إدراج `<input>` مع خصائص مثل `value, name, class, id, style`  
-- `حقل رقم سري` → إدراج `<input type="password">`  
-
-📝 **الوصف:** تسهيل إدراج حقول الإدخال مع التخصيص.  
-
----
-
-#### **🔹 إدراج روابط وصور**
-📌 **الأوامر:**  
-- `رابط` → إدراج `<a>` مع `href` و `target`  
-- `صورة` → إدراج `<img>` مع `src` و `alt`  
-
-📝 **الوصف:** إدراج الروابط والصور بسرعة.  
-
----
-
-#### **🔹 إنشاء الجداول والقوائم**  
-📌 **الأوامر:**  
-- `جدول عدد العناصر 2` → إدراج `<table>` مع رأس وصفين  
-- `قائمة غير مرتبة` → إدراج `<ul>` مع عناصر `<li>`  
-
-📝 **الوصف:** تسريع إنشاء الجداول والقوائم في HTML.  
-
----
-
-#### **🔹 ألوان CSS جاهزة**  
-📌 **الأوامر:**  
-- `لون أحمر` → `color: red;`  
-- `لون أزرق` → `color: blue;`  
-- `لون أخضر` → `color: green;`  
-- `لون أصفر` → `color: yellow;`  
-- `لون أسود` → `color: black;`  
-- `لون أبيض` → `color: white;`  
-- `لون رمادي` → `color: gray;`  
-- `لون بنفسجي` → `color: purple;`  
-- `لون برتقالي` → `color: orange;`  
-- `لون وردي` → `color: pink;`  
-- `لون بني` → `color: brown;`  
-- `لون سماوي` → `color: cyan;`  
-- `لون أرجواني` → `color: magenta;`  
-- `لون ليموني` → `color: lime;`  
-- `لون ذهبي` → `color: gold;`  
-- `لون فضي` → `color: silver;`  
-- `لون كحلي` → `color: navy;`  
-- `لون زيتوني` → `color: olive;`  
-- `لون تركواز` → `color: teal;`  
-- `لون خمري` → `color: maroon;`  
-- `لون بيج` → `color: beige;`  
-
-📝 **الوصف:** إدراج خصائص الألوان بسهولة في **HTML و CSS**.  
-
----
-
-#### **🔹 إدراج عناصر HTML متنوعة**  
-📌 **الأوامر:**  
-- `حاوية` → إدراج `<div>` مع `width`, `height`, `background-color`  
-- `نص` → إدراج `<span>` مع `font-family, font-size, font-weight, color`  
-- `فقرة` → إدراج `<p>` مع `font-size, color, text-align, line-height`  
-- `فاصل` → إدراج `<hr>` مع `width, height, background-color, margin`  
-
-📝 **الوصف:** إدراج عناصر HTML بسرعة مع التخصيص.  
-
----
-
-### 🎯 **كيف تستخدم الأوامر في VS Code؟**
-1. **ابدأ بكتابة اسم الأمر** داخل ملف **HTML** أو **CSS**.  
-2. **ستظهر لك الاقتراحات** التلقائية من VS Code.  
-3. **اختر الأمر المطلوب** واضغط **Enter** ليتم إدراج الكود.  
-4. **استخدم `Tab`** للتنقل بين القيم القابلة للتخصيص.  
-
-✅ **مثال عملي:**  
-- كتابة **"حاوية"** في ملف HTML سيقوم بإدراج:
+#### الكود:
 ```html
-<div style="width: 200px; height: 100px; background-color: lightgray;">
-    محتوى القسم
+<!DOCTYPE html>
+<html lang='ar'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+ <title>${1:صفحة جديدة}</title>
+</head>
+<body>
+ ${2}
+</body>
+</html>
+```
+
+### الوصف:
+
+#### الأمر:
+<span class='command'>عنوان الصفحة</span>
+
+#### الكود:
+```html
+<title>${1:عنوان الصفحة}</title>
+```
+
+### الوصف:
+
+#### الأمر:
+<span class='command'>خصائص القيمة</span>
+
+#### الكود:
+```html
+value="${1:قيمة افتراضية}"
+```
+
+### الوصف:
+
+#### الأمر:
+<span class='command'>خصائص الاسم</span>
+
+#### الكود:
+```html
+name="${1:قيمة افتراضية}"
+```
+
+### الوصف:
+
+#### الأمر:
+<span class='command'>خصائص الفئة</span>
+
+#### الكود:
+```html
+class="${1:قيمة افتراضية}"
+```
+
+### الوصف:
+
+#### الأمر:
+<span class='command'>خصائص المعرف</span>
+
+#### الكود:
+```html
+id="${1:قيمة افتراضية}"
+```
+
+### الوصف:
+
+#### الأمر:
+<span class='command'>خصائص النمط</span>
+
+#### الكود:
+```html
+style="${1:قيمة افتراضية}"
+```
+
+### الوصف:
+
+#### الأمر:
+<span class='command'>زر</span>
+
+#### الكود:
+```html
+<button>${1:زر}</button
+```
+
+### الوصف:
+
+#### الأمر:
+<span class='command'>زر مع تنسيق</span>
+
+#### الكود:
+```html
+<button name="${2:button}" class="${5:|button,key,press|}" id="button${3:1}" style="${4:background-color:red}">${1:زر}</button
+```
+
+### الوصف:
+
+#### الأمر:
+<span class='command'>زر ارسال</span>
+
+#### الكود:
+```html
+<button>${1|فتح,اضغط,الغاء,اغلاق,جديد,تحويل|}</button
+```
+
+### الوصف:
+
+#### الأمر:
+<span class='command'>حقل نصي</span>
+
+#### الكود:
+```html
+<input type="text" name="${1:inputName}" id="${2:inputId}" placeholder="${3:اكتب هنا}" />
+```
+
+### الوصف:
+
+#### الأمر:
+<span class='command'>حقل نصي مع خيارات</span>
+
+#### الكود:
+```html
+<input type="text" ${1|value,name,class,id,style|}="${2}" />
+```
+
+### الوصف:
+
+#### الأمر:
+<span class='command'>رابط</span>
+
+#### الكود:
+```html
+<a href="${1:https://www.example.com}" target="${2:_blank}">${3:رابط}</a>
+```
+
+### الوصف:
+
+#### الأمر:
+<span class='command'>صورة</span>
+
+#### الكود:
+```html
+<img src="${1:https://www.example.com/image.jpg}" alt="${2:صورة}" />
+```
+
+### الوصف:
+
+#### الأمر:
+<span class='command'>جدول عدد العناصر 2</span>
+
+#### الكود:
+```html
+<table>
+    <thead>
+        <tr>
+            <th>${1:العنوان}</th>
+            <th>${2:العنوان}</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>${3:القيمة}</td>
+            <td>${4:القيمة}</td>
+        </tr>
+    </tbody>
+</table>
+```
+
+### الوصف:
+
+#### الأمر:
+<span class='command'>صف جدول</span>
+
+#### الكود:
+```html
+<tr>
+    ${1:اضفة خلية البيانات}
+</tr>
+```
+
+### الوصف:
+
+#### الأمر:
+<span class='command'>جدول</span>
+
+#### الكود:
+```html
+<td>
+    ${1:البيانات الأولى}
+</td>
+```
+
+### الوصف:
+
+#### الأمر:
+<span class='command'>قائمة غير مرتبة</span>
+
+#### الكود:
+```html
+<ul>
+    <li>${1:العنصر}</li>
+    <li>${2:العنصر}</li>
+</ul>
+```
+
+### الوصف:
+
+#### الأمر:
+<span class='command'>لون احمر</span>
+
+#### الكود:
+```html
+color: red;
+```
+
+### الوصف:
+
+#### الأمر:
+<span class='command'>لون أزرق</span>
+
+#### الكود:
+```html
+color: blue;
+```
+
+### الوصف:
+
+#### الأمر:
+<span class='command'>لون أخضر</span>
+
+#### الكود:
+```html
+color: green;
+```
+
+### الوصف:
+
+#### الأمر:
+<span class='command'>لون أصفر</span>
+
+#### الكود:
+```html
+color: yellow;
+```
+
+### الوصف:
+
+#### الأمر:
+<span class='command'>لون أسود</span>
+
+#### الكود:
+```html
+color: black;
+```
+
+### الوصف:
+
+#### الأمر:
+<span class='command'>لون أبيض</span>
+
+#### الكود:
+```html
+color: white;
+```
+
+### الوصف:
+
+#### الأمر:
+<span class='command'>لون رمادي</span>
+
+#### الكود:
+```html
+color: gray;
+```
+
+### الوصف:
+
+#### الأمر:
+<span class='command'>لون بنفسجي</span>
+
+#### الكود:
+```html
+color: purple;
+```
+
+### الوصف:
+
+#### الأمر:
+<span class='command'>لون برتقالي</span>
+
+#### الكود:
+```html
+color: orange;
+```
+
+### الوصف:
+
+#### الأمر:
+<span class='command'>لون وردي</span>
+
+#### الكود:
+```html
+color: pink;
+```
+
+### الوصف:
+
+#### الأمر:
+<span class='command'>لون بني</span>
+
+#### الكود:
+```html
+color: brown;
+```
+
+### الوصف:
+
+#### الأمر:
+<span class='command'>لون سماوي</span>
+
+#### الكود:
+```html
+color: cyan;
+```
+
+### الوصف:
+
+#### الأمر:
+<span class='command'>لون أرجواني</span>
+
+#### الكود:
+```html
+color: magenta;
+```
+
+### الوصف:
+
+#### الأمر:
+<span class='command'>لون ليموني</span>
+
+#### الكود:
+```html
+color: lime;
+```
+
+### الوصف:
+
+#### الأمر:
+<span class='command'>لون ذهبي</span>
+
+#### الكود:
+```html
+color: gold;
+```
+
+### الوصف:
+
+#### الأمر:
+<span class='command'>لون فضي</span>
+
+#### الكود:
+```html
+color: silver;
+```
+
+### الوصف:
+
+#### الأمر:
+<span class='command'>لون كحلي</span>
+
+#### الكود:
+```html
+color: navy;
+```
+
+### الوصف:
+
+#### الأمر:
+<span class='command'>لون زيتوني</span>
+
+#### الكود:
+```html
+color: olive;
+```
+
+### الوصف:
+
+#### الأمر:
+<span class='command'>لون تركواز</span>
+
+#### الكود:
+```html
+color: teal;
+```
+
+### الوصف:
+
+#### الأمر:
+<span class='command'>لون خمري</span>
+
+#### الكود:
+```html
+color: maroon;
+```
+
+### الوصف:
+
+#### الأمر:
+<span class='command'>لون بيج</span>
+
+#### الكود:
+```html
+color: beige;
+```
+
+### الوصف:
+
+#### الأمر:
+<span class='command'>حاوية</span>
+
+#### الكود:
+```html
+<div style="width: ${1:200}px; height: ${2:100}px; background-color: ${3:lightgray};">
+    ${4:محتوى القسم}
 </div>
 ```
 
----
+### الوصف:
 
-### **🚀 مميزات الإضافة**
-✔️ **تسريع كتابة أكواد HTML و CSS**  
-✔️ **إدراج عناصر HTML جاهزة بضغطة زر**  
-✔️ **دعم لتنسيق الألوان والأزرار والحقول والجداول**  
-✔️ **مناسبة للمطورين العرب**  
+#### الأمر:
+<span class='command'>نص</span>
 
-**💡 هل لديك أي تحسينات أو إضافات ترغب بها؟ 😊**
+#### الكود:
+```html
+<span style="font-family: ${1:Arial}; font-size: ${2:16}px; font-weight: ${3:normal}; color: ${4:black};">
+    ${5:نص هنا}
+</span>
+```
 
-## Features
+### الوصف:
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+#### الأمر:
+<span class='command'>فقرة</span>
 
-For example if there is an image subfolder under your extension project workspace:
+#### الكود:
+```html
+<p style="font-size: ${1:16}px; color: ${2:black}; text-align: ${3:left}; line-height: ${4:1.5};">
+    ${5:نص الفقرة هنا}
+</p>
+```
 
-\!\[feature X\]\(images/feature-x.png\)
+### الوصف:
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+#### الأمر:
+<span class='command'>فاصل</span>
 
-## Requirements
+#### الكود:
+```html
+<hr style="width: ${1:100%}; height: ${2:2}px; background-color: ${3:#000}; border: none; margin: ${4:10}px 0;">
+```
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+### الوصف:
 
-## Extension Settings
+#### الأمر:
+<span class='command'>حقل رقم سري</span>
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+#### الكود:
+```html
+<input type="password" name="${1:password}" id="${2:password}" placeholder="${3:أدخل كلمة المرور}" required>
+```
 
-For example:
+### الوصف:
 
-This extension contributes the following settings:
+#### الأمر:
+<span class='command'>فيديو</span>
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+#### الكود:
+```html
+<video width="${1:640}" height="${2:360}" controls>
+    <source src="${3:video.mp4}" type="${4:video/mp4}">
+    ${5:متصفحك لا يدعم تشغيل الفيديو.}
+</video>
+```
 
-## Known Issues
+### الوصف:
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+#### الأمر:
+<span class='command'>حقل نصي متعدد</span>
 
-## Release Notes
+#### الكود:
+```html
+<textarea name="${1:textareaName}" id="${2:textareaId}" rows="${3:4}" cols="${4:50}" placeholder="${5:اكتب هنا}">${6}</textarea>
+```
 
-Users appreciate release notes as you update your extension.
+### الوصف:
 
-### 1.0.0
+#### الأمر:
+<span class='command'>مقطع صوتي</span>
 
-Initial release of ...
+#### الكود:
+```html
+<audio controls>
+    <source src="${1:audio.mp3}" type="${2:audio/mpeg}">
+    ${3:متصفحك لا يدعم تشغيل الصوت.}
+</audio>
+```
 
-### 1.0.1
+### الوصف:
 
-Fixed issue #.
+#### الأمر:
+<span class='command'>نص عريض</span>
 
-### 1.1.0
+#### الكود:
+```html
+<b>${1:نص عريض هنا}</b>
+```
 
-Added features X, Y, and Z.
+### الوصف:
 
----
+#### الأمر:
+<span class='command'>اقتباس</span>
 
-## Working with Markdown
+#### الكود:
+```html
+<blockquote style="font-size: ${1:16}px; color: ${2:gray}; border-left: ${3:4px solid #ccc}; padding: ${4:10px}; margin: ${5:10px 0};">
+    ${6:نص الاقتباس هنا}
+</blockquote>
+```
 
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
+### الوصف:
 
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
+#### الأمر:
+<span class='command'>نموذج</span>
 
-## For more information
+#### الكود:
+```html
+<form action="${1:submit.php}" method="${2:post}" ${3:enctype="multipart/form-data"}>
+    <label for="${4:inputId}">${5:اسم الحقل}</label>
+    <input type="${6:text}" name="${7:inputName}" id="${4:inputId}" placeholder="${8:اكتب هنا}" />
+    <button type="${9:submit}">${10:إرسال}</button>
+</form>
+```
 
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+### الوصف:
 
-**توكل على الله وابدأ على بركته
-لاتنسانا مع خالص الدعاء!
-**
+#### الأمر:
+<span class='command'>عنوان</span>
+
+#### الكود:
+```html
+<h1 style="font-size: ${1:32}px; color: ${2:black}; text-align: ${3:left};">
+    ${4:عنوان هنا}
+</h1>
+```
+
+### الوصف:
+
+#### الأمر:
+<span class='command'>رابط ملف التنسيق</span>
+
+#### الكود:
+```html
+<link rel="${1:stylesheet}" href="${2:style.css}" type="${3:text/css}" />
+```
+
+### الوصف:
+
+#### الأمر:
+<span class='command'>جافا سكريبت</span>
+
+#### الكود:
+```html
+<script type="${1|text/javascript,module|}">
+    ${2:// اكتب كود JavaScript هنا}
+</script>
+```
+
+### الوصف:
+
+#### الأمر:
+<span class='command'>قائمة منسدلة</span>
+
+#### الكود:
+```html
+<select name="${1:selectName}" id="${2:selectId}">
+    <option value="${3:option1Value}">${4:الخيار الأول}</option>
+    <option value="${5:option2Value}">${6:الخيار الثاني}</option>
+</select>
+```
+
+### الوصف:
+
+#### الأمر:
+<span class='command'>خيار</span>
+
+#### الكود:
+```html
+<option value="${1:القيمة}">${2:النص}</option>
+```
+
+### الوصف:
+
+#### الأمر:
+<span class='command'>تنسيق</span>
+
+#### الكود:
+```html
+<style>
+    ${1:/* اكتب كود CSS هنا */}
+</style>
+```
+
+### الوصف:
+
+#### الأمر:
+<span class='command'>رابط جافا سكريبت خارجي</span>
+
+#### الكود:
+```html
+<script src="${1:script.js}" type="${2:text/javascript}"></script>
+```
+
+### الوصف:
+
+#### الأمر:
+<span class='command'>قائمة </span>
+
+#### الكود:
+```html
+<menu>
+    <li>${1:العنصر الأول}</li>
+    <li>${2:العنصر الثاني}</li>
+</menu>
+```
+
+### الوصف:
+
+#### الأمر:
+<span class='command'>عنصر قائمة</span>
+
+#### الكود:
+```html
+<li>${1:العنصر}</li>
+```
+
+### الوصف:
+
+#### الأمر:
+<span class='command'>صور بحسب مقاس المحدد</span>
+
+#### الكود:
+```html
+<picture>
+    <source srcset="${1:example-large.jpg}" media="(min-width: ${2:800px})">
+    <source srcset="${3:example-medium.jpg}" media="(min-width: ${4:400px})">
+    <img src="${5:example-small.jpg}" alt="${6:وصف الصورة}">
+</picture>
+```
+
+### الوصف:
+
+#### الأمر:
+<span class='command'>زر ادخال صورة</span>
+
+#### الكود:
+```html
+<input type="file" id="${1:poster}" name="${2:poster}" accept="${3:image/png, image/jpeg}" />
+```
+
+### الوصف:
+
+#### الأمر:
+<span class='command'>زر ادخال ملف PDF</span>
+
+#### الكود:
+```html
+<input type="file" id="${1:pdfFile}" name="${2:pdfFile}" accept="${3:application/pdf}" />
+```
+
