@@ -2,7 +2,7 @@
   "name": "arabictohtml",
   "displayName": "Arabic to html",
   "description": "البرمجة باللغة العربية لعناصر الهوتمل",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "engines": {
     "vscode": "^1.98.0"
   },

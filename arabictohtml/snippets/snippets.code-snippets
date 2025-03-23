@@ -71,7 +71,7 @@
     "button": {
         "prefix": "زر مع تنسيق",
         "body": [
-            "<button name=\"${2:button}\" class=\"${5:|button,key,press|}\" id=\"button${3:1}\" style=\"${4:background-color:red}\">${1:زر}</button"
+            "<button name=\"${2:button}\" class=\"${5|button,key,press|}\" id=\"button${3:1}\" style=\"${4:background-color:red}\">${1:زر}</button>"
         ],
         "description": "اضافة زر هوتمل",
         "scope": "html"
@@ -79,7 +79,7 @@
     "button:multi": {
         "prefix": "زر ارسال",
         "body": [
-            "<button>${1|فتح,اضغط,الغاء,اغلاق,جديد,تحويل|}</button"
+            "<button>${1|فتح,اضغط,الغاء,اغلاق,جديد,تحويل|}</button>"
         ],
         "description": "اضافة زر هوتمل عادي من دون تنسيق",
         "scope": "html"
@@ -549,6 +549,120 @@
             "<input type=\"file\" id=\"${1:pdfFile}\" name=\"${2:pdfFile}\" accept=\"${3:application/pdf}\" />"
         ],
         "description": "إضافة عنصر إدخال لتحميل ملفات PDF",
+        "scope": "html"
+    },
+    "dl:dt>:dd:html": {
+        "prefix": "قائمة تعريفات",
+        "body": [
+            "<dl>",
+            "   <dt>${1}</dt>",
+            "     <dd>${2}</dd>",
+            "</dl>"
+        ],
+        "description": "اضافة قاذمة من العنصار تعرف عن بعضها بشكل مرتب",
+        "scope": "html"
+    },
+    "em:html": {
+        "prefix": "نص مائل",
+        "body": [
+            "<em>${1:نص مائل هنا}</em>"
+        ],
+        "description": "إضافة نص مائل باستخدام عنصر em في HTML",
+        "scope": "html"
+    },
+    "form:personalia": {
+        "prefix": "قالب نموذج شخصي",
+        "body": [
+            "<form action=\"${1:/action_page.php}\" method=\"${2:post}\">",
+            " <fieldset>",
+            "  <legend>${3:البيانات الشخصية}:</legend>",
+            "  <label for=\"fname\">${4:الاسم}:</label>",
+            "  <input type=\"text\" id=\"fname\" name=\"fname\"><br><br>",
+            "  <label for=\"lname\">${5:اسم العائلة}:</label>",
+            "  <input type=\"text\" id=\"lname\" name=\"lname\"><br><br>",
+            "  <label for=\"email\">${6:البريد الالكتروني}:</label>",
+            "  <input type=\"email\" id=\"email\" name=\"email\"><br><br>",
+            "  <label for=\"birthday\">${7:Birthday}:التاريخ</label>",
+            "  <input type=\"date\" id=\"birthday\" name=\"birthday\"><br><br>",
+            "  <input type=\"submit\" value=\"${8:Submit}\">",
+            " </fieldset>",
+            "</form>"
+        ],
+        "description": "إضافة نموذج HTML يحتوي على حقول شخصية",
+        "scope": "html"
+    },
+    "input:date": {
+        "prefix": "حقل تاريخ",
+        "body": [
+            "<input type=\"date\" id=\"${1:birthday}\" name=\"${2:birthday}\" />"
+        ],
+        "description": "إضافة حقل إدخال لتحديد التاريخ",
+        "scope": "html"
+    },
+    "del:html": {
+        "prefix": "نص يتوسطه خط",
+        "body": [
+            "<del>${1:النص}</del>"
+        ],
+        "description": "إضافة نص يتوسطه خط باستخدام عنصر del في HTML",
+        "scope": "html"
+    },
+    "ins:html": {
+        "prefix": "نص مسطر",
+        "body": [
+            "<ins>${1:النص المضاف}</ins>"
+        ],
+        "description": "إضافة نص تحته خط باستخدام عنصر ins في HTML",
+        "scope": "html"
+    },
+    "label:html": {
+        "prefix": "وسم تسمية",
+        "body": [
+            "<label for=\"${1:inputId}\">${2:النص هنا}</label>"
+        ],
+        "description": "إضافة عنصر label لتسمية حقل إدخال في HTML",
+        "scope": "html"
+    },
+    "meter:html": {
+        "prefix": "مقياس نسبة",
+        "body": [
+            "<meter id=\"${1:meterId}\" value=\"${2:القيمة الحالية}\" min=\"${3:القيمة الدنيا}\" max=\"${4:القيمة القصوى}\">${5:الوصف هنا}</meter>"
+        ],
+        "description": "إضافة عنصر meter لعرض مقياس مع تلميحات بالمعنى",
+        "scope": "html"
+    },
+    "nav:html": {
+        "prefix": "قائمة شريط تنقل",
+        "body": [
+            "<nav>",
+            "  <a href=\"${1:/html/}\">${2:الرابط الأول}</a>",
+            "  <a href=\"${3:/css/}\">${4:الرابط الثاني}</a>",
+            "</nav>"
+        ],
+        "description": "قائمة من الروابط  كشريط عناوين",
+        "scope": "html"
+    },
+    "map:html": {
+        "prefix": "خريطة صورة",
+        "body": [
+            "<img src=\"${1:workplace.jpg}\" alt=\"${2:Workplace}\" usemap=\"#${3:workmap}\" width=\"${4:400}\" height=\"${5:379}\">",
+            "",
+            "<map name=\"${3:workmap}\">",
+            "  <area shape=\"rect\" coords=\"${6:34,44,270,350}\" alt=\"${7:Computer}\" href=\"${8:computer.htm}\">",
+            "  <area shape=\"rect\" coords=\"${9:290,172,333,250}\" alt=\"${10:Phone}\" href=\"${11:phone.htm}\">",
+            "  <area shape=\"circle\" coords=\"${12:337,300,44}\" alt=\"${13:Cup of coffee}\" href=\"${14:coffee.htm}\">",
+            "</map>"
+        ],
+        "description": "إضافة خريطة صورة مع مناطق تفاعلية باستخدام map و area",
+        "scope": "html"
+    },
+    "progress:html": {
+        "prefix": "شريط نسبةالتقدم",
+        "body": [
+            "<label for=\"${1:file}\">${2:وصف التقدم}:</label>",
+            "<progress id=\"${1:file}\" value=\"${3:القيمة الحالية}\" max=\"${4:القيمة القصوى}\">${5:النسبة المئوية}</progress>"
+        ],
+        "description": "إضافة شريط تقدم (progress) مع وسم label في HTML",
         "scope": "html"
     }
 }

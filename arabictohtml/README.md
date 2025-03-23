@@ -1,170 +1,136 @@
+# دليل استخدام السنابيتات (Snippets Guide)
 
-<style>
-    .command {
-        background-color: #f0f8ff;
-        color: #333;
-        font-weight: bold;
-        padding: 5px;
-        border-radius: 5px;
-        display: inline-block;
-    }
-</style>
-### الوصف:
+## الوصف
+هذا الملف يحتوي على جميع السنابيتات المتوفرة في الإضافة، مع وصف لكل عنصر والكود الخاص به.
 
-#### الأمر:
-<span class='command'>صفحة</span>
+---
 
-#### الكود:
+## قائمة السنابيتات
+
+### 1. صفحة HTML جديدة
+#### الأمر: `صفحة`
 ```html
 <!DOCTYPE html>
 <html lang='ar'>
 <head>
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
- <title>${1:صفحة جديدة}</title>
+    <title>${1:صفحة جديدة}</title>
 </head>
 <body>
- ${2}
+    ${2}
 </body>
 </html>
 ```
 
-### الوصف:
+---
 
-#### الأمر:
-<span class='command'>عنوان الصفحة</span>
-
-#### الكود:
+### 2. عنوان الصفحة
+#### الأمر: `عنوان الصفحة`
 ```html
 <title>${1:عنوان الصفحة}</title>
 ```
 
-### الوصف:
+---
 
-#### الأمر:
-<span class='command'>خصائص القيمة</span>
-
-#### الكود:
+### 3. خصائص القيمة
+#### الأمر: `خصائص القيمة`
 ```html
 value="${1:قيمة افتراضية}"
 ```
 
-### الوصف:
+---
 
-#### الأمر:
-<span class='command'>خصائص الاسم</span>
-
-#### الكود:
+### 4. خصائص الاسم
+#### الأمر: `خصائص الاسم`
 ```html
 name="${1:قيمة افتراضية}"
 ```
 
-### الوصف:
+---
 
-#### الأمر:
-<span class='command'>خصائص الفئة</span>
-
-#### الكود:
+### 5. خصائص الفئة
+#### الأمر: `خصائص الفئة`
 ```html
 class="${1:قيمة افتراضية}"
 ```
 
-### الوصف:
+---
 
-#### الأمر:
-<span class='command'>خصائص المعرف</span>
-
-#### الكود:
+### 6. خصائص المعرف
+#### الأمر: `خصائص المعرف`
 ```html
 id="${1:قيمة افتراضية}"
 ```
 
-### الوصف:
+---
 
-#### الأمر:
-<span class='command'>خصائص النمط</span>
-
-#### الكود:
+### 7. خصائص النمط
+#### الأمر: `خصائص النمط`
 ```html
 style="${1:قيمة افتراضية}"
 ```
 
-### الوصف:
+---
 
-#### الأمر:
-<span class='command'>زر</span>
-
-#### الكود:
+### 8. زر
+#### الأمر: `زر`
 ```html
-<button>${1:زر}</button
+<button>${1:زر}</button>
 ```
 
-### الوصف:
+---
 
-#### الأمر:
-<span class='command'>زر مع تنسيق</span>
-
-#### الكود:
+### 9. زر مع تنسيق
+#### الأمر: `زر مع تنسيق`
 ```html
-<button name="${2:button}" class="${5:|button,key,press|}" id="button${3:1}" style="${4:background-color:red}">${1:زر}</button
+<button name="${2:button}" class="${5|button,key,press|}" id="button${3:1}" style="${4:background-color:red}">${1:زر}</button>
 ```
 
-### الوصف:
+---
 
-#### الأمر:
-<span class='command'>زر ارسال</span>
-
-#### الكود:
+### 10. زر إرسال
+#### الأمر: `زر ارسال`
 ```html
-<button>${1|فتح,اضغط,الغاء,اغلاق,جديد,تحويل|}</button
+<button>${1|فتح,اضغط,الغاء,اغلاق,جديد,تحويل|}</button>
 ```
 
-### الوصف:
+---
 
-#### الأمر:
-<span class='command'>حقل نصي</span>
-
-#### الكود:
+### 11. حقل نصي
+#### الأمر: `حقل نصي`
 ```html
 <input type="text" name="${1:inputName}" id="${2:inputId}" placeholder="${3:اكتب هنا}" />
 ```
 
-### الوصف:
+---
 
-#### الأمر:
-<span class='command'>حقل نصي مع خيارات</span>
-
-#### الكود:
+### 12. حقل نصي مع خيارات
+#### الأمر: `حقل نصي مع خيارات`
 ```html
 <input type="text" ${1|value,name,class,id,style|}="${2}" />
 ```
 
-### الوصف:
+---
 
-#### الأمر:
-<span class='command'>رابط</span>
-
-#### الكود:
+### 13. رابط
+#### الأمر: `رابط`
 ```html
 <a href="${1:https://www.example.com}" target="${2:_blank}">${3:رابط}</a>
 ```
 
-### الوصف:
+---
 
-#### الأمر:
-<span class='command'>صورة</span>
-
-#### الكود:
+### 14. صورة
+#### الأمر: `صورة`
 ```html
 <img src="${1:https://www.example.com/image.jpg}" alt="${2:صورة}" />
 ```
 
-### الوصف:
+---
 
-#### الأمر:
-<span class='command'>جدول عدد العناصر 2</span>
-
-#### الكود:
+### 15. جدول
+#### الأمر: `جدول`
 ```html
 <table>
     <thead>
@@ -182,36 +148,20 @@ style="${1:قيمة افتراضية}"
 </table>
 ```
 
-### الوصف:
+---
 
-#### الأمر:
-<span class='command'>صف جدول</span>
-
-#### الكود:
+### 16. صف جدول
+#### الأمر: `صف جدول`
 ```html
 <tr>
     ${1:اضفة خلية البيانات}
 </tr>
 ```
 
-### الوصف:
+---
 
-#### الأمر:
-<span class='command'>جدول</span>
-
-#### الكود:
-```html
-<td>
-    ${1:البيانات الأولى}
-</td>
-```
-
-### الوصف:
-
-#### الأمر:
-<span class='command'>قائمة غير مرتبة</span>
-
-#### الكود:
+### 17. قائمة غير مرتبة
+#### الأمر: `قائمة غير مرتبة`
 ```html
 <ul>
     <li>${1:العنصر}</li>
@@ -219,278 +169,112 @@ style="${1:قيمة افتراضية}"
 </ul>
 ```
 
-### الوصف:
+---
 
-#### الأمر:
-<span class='command'>لون احمر</span>
-
-#### الكود:
-```html
+### 18. لون أحمر
+#### الأمر: `لون احمر`
+```css
 color: red;
 ```
 
-### الوصف:
+---
 
-#### الأمر:
-<span class='command'>لون أزرق</span>
-
-#### الكود:
-```html
+### 19. لون أزرق
+#### الأمر: `لون أزرق`
+```css
 color: blue;
 ```
 
-### الوصف:
+---
 
-#### الأمر:
-<span class='command'>لون أخضر</span>
-
-#### الكود:
-```html
+### 20. لون أخضر
+#### الأمر: `لون أخضر`
+```css
 color: green;
 ```
 
-### الوصف:
+---
 
-#### الأمر:
-<span class='command'>لون أصفر</span>
-
-#### الكود:
-```html
+### 21. لون أصفر
+#### الأمر: `لون أصفر`
+```css
 color: yellow;
 ```
 
-### الوصف:
+---
 
-#### الأمر:
-<span class='command'>لون أسود</span>
-
-#### الكود:
-```html
+### 22. لون أسود
+#### الأمر: `لون أسود`
+```css
 color: black;
 ```
 
-### الوصف:
+---
 
-#### الأمر:
-<span class='command'>لون أبيض</span>
-
-#### الكود:
-```html
+### 23. لون أبيض
+#### الأمر: `لون أبيض`
+```css
 color: white;
 ```
 
-### الوصف:
+---
 
-#### الأمر:
-<span class='command'>لون رمادي</span>
-
-#### الكود:
-```html
+### 24. لون رمادي
+#### الأمر: `لون رمادي`
+```css
 color: gray;
 ```
 
-### الوصف:
+---
 
-#### الأمر:
-<span class='command'>لون بنفسجي</span>
-
-#### الكود:
-```html
-color: purple;
-```
-
-### الوصف:
-
-#### الأمر:
-<span class='command'>لون برتقالي</span>
-
-#### الكود:
-```html
-color: orange;
-```
-
-### الوصف:
-
-#### الأمر:
-<span class='command'>لون وردي</span>
-
-#### الكود:
-```html
-color: pink;
-```
-
-### الوصف:
-
-#### الأمر:
-<span class='command'>لون بني</span>
-
-#### الكود:
-```html
-color: brown;
-```
-
-### الوصف:
-
-#### الأمر:
-<span class='command'>لون سماوي</span>
-
-#### الكود:
-```html
-color: cyan;
-```
-
-### الوصف:
-
-#### الأمر:
-<span class='command'>لون أرجواني</span>
-
-#### الكود:
-```html
-color: magenta;
-```
-
-### الوصف:
-
-#### الأمر:
-<span class='command'>لون ليموني</span>
-
-#### الكود:
-```html
-color: lime;
-```
-
-### الوصف:
-
-#### الأمر:
-<span class='command'>لون ذهبي</span>
-
-#### الكود:
-```html
-color: gold;
-```
-
-### الوصف:
-
-#### الأمر:
-<span class='command'>لون فضي</span>
-
-#### الكود:
-```html
-color: silver;
-```
-
-### الوصف:
-
-#### الأمر:
-<span class='command'>لون كحلي</span>
-
-#### الكود:
-```html
-color: navy;
-```
-
-### الوصف:
-
-#### الأمر:
-<span class='command'>لون زيتوني</span>
-
-#### الكود:
-```html
-color: olive;
-```
-
-### الوصف:
-
-#### الأمر:
-<span class='command'>لون تركواز</span>
-
-#### الكود:
-```html
-color: teal;
-```
-
-### الوصف:
-
-#### الأمر:
-<span class='command'>لون خمري</span>
-
-#### الكود:
-```html
-color: maroon;
-```
-
-### الوصف:
-
-#### الأمر:
-<span class='command'>لون بيج</span>
-
-#### الكود:
-```html
-color: beige;
-```
-
-### الوصف:
-
-#### الأمر:
-<span class='command'>حاوية</span>
-
-#### الكود:
+### 25. حاوية
+#### الأمر: `حاوية`
 ```html
 <div style="width: ${1:200}px; height: ${2:100}px; background-color: ${3:lightgray};">
     ${4:محتوى القسم}
 </div>
 ```
 
-### الوصف:
+---
 
-#### الأمر:
-<span class='command'>نص</span>
-
-#### الكود:
+### 26. نص
+#### الأمر: `نص`
 ```html
 <span style="font-family: ${1:Arial}; font-size: ${2:16}px; font-weight: ${3:normal}; color: ${4:black};">
     ${5:نص هنا}
 </span>
 ```
 
-### الوصف:
+---
 
-#### الأمر:
-<span class='command'>فقرة</span>
-
-#### الكود:
+### 27. فقرة
+#### الأمر: `فقرة`
 ```html
 <p style="font-size: ${1:16}px; color: ${2:black}; text-align: ${3:left}; line-height: ${4:1.5};">
     ${5:نص الفقرة هنا}
 </p>
 ```
 
-### الوصف:
+---
 
-#### الأمر:
-<span class='command'>فاصل</span>
-
-#### الكود:
+### 28. فاصل
+#### الأمر: `فاصل`
 ```html
 <hr style="width: ${1:100%}; height: ${2:2}px; background-color: ${3:#000}; border: none; margin: ${4:10}px 0;">
 ```
 
-### الوصف:
+---
 
-#### الأمر:
-<span class='command'>حقل رقم سري</span>
-
-#### الكود:
+### 29. حقل رقم سري
+#### الأمر: `حقل رقم سري`
 ```html
 <input type="password" name="${1:password}" id="${2:password}" placeholder="${3:أدخل كلمة المرور}" required>
 ```
 
-### الوصف:
+---
 
-#### الأمر:
-<span class='command'>فيديو</span>
-
-#### الكود:
+### 30. فيديو
+#### الأمر: `فيديو`
 ```html
 <video width="${1:640}" height="${2:360}" controls>
     <source src="${3:video.mp4}" type="${4:video/mp4}">
@@ -498,22 +282,18 @@ color: beige;
 </video>
 ```
 
-### الوصف:
+---
 
-#### الأمر:
-<span class='command'>حقل نصي متعدد</span>
-
-#### الكود:
+### 31. حقل نصي متعدد
+#### الأمر: `حقل نصي متعدد`
 ```html
 <textarea name="${1:textareaName}" id="${2:textareaId}" rows="${3:4}" cols="${4:50}" placeholder="${5:اكتب هنا}">${6}</textarea>
 ```
 
-### الوصف:
+---
 
-#### الأمر:
-<span class='command'>مقطع صوتي</span>
-
-#### الكود:
+### 32. مقطع صوتي
+#### الأمر: `مقطع صوتي`
 ```html
 <audio controls>
     <source src="${1:audio.mp3}" type="${2:audio/mpeg}">
@@ -521,34 +301,28 @@ color: beige;
 </audio>
 ```
 
-### الوصف:
+---
 
-#### الأمر:
-<span class='command'>نص عريض</span>
-
-#### الكود:
+### 33. نص عريض
+#### الأمر: `نص عريض`
 ```html
 <b>${1:نص عريض هنا}</b>
 ```
 
-### الوصف:
+---
 
-#### الأمر:
-<span class='command'>اقتباس</span>
-
-#### الكود:
+### 34. اقتباس
+#### الأمر: `اقتباس`
 ```html
 <blockquote style="font-size: ${1:16}px; color: ${2:gray}; border-left: ${3:4px solid #ccc}; padding: ${4:10px}; margin: ${5:10px 0};">
     ${6:نص الاقتباس هنا}
 </blockquote>
 ```
 
-### الوصف:
+---
 
-#### الأمر:
-<span class='command'>نموذج</span>
-
-#### الكود:
+### 35. نموذج
+#### الأمر: `نموذج`
 ```html
 <form action="${1:submit.php}" method="${2:post}" ${3:enctype="multipart/form-data"}>
     <label for="${4:inputId}">${5:اسم الحقل}</label>
@@ -557,46 +331,38 @@ color: beige;
 </form>
 ```
 
-### الوصف:
+---
 
-#### الأمر:
-<span class='command'>عنوان</span>
-
-#### الكود:
+### 36. عنوان
+#### الأمر: `عنوان`
 ```html
 <h1 style="font-size: ${1:32}px; color: ${2:black}; text-align: ${3:left};">
     ${4:عنوان هنا}
 </h1>
 ```
 
-### الوصف:
+---
 
-#### الأمر:
-<span class='command'>رابط ملف التنسيق</span>
-
-#### الكود:
+### 37. رابط ملف التنسيق
+#### الأمر: `رابط ملف التنسيق`
 ```html
 <link rel="${1:stylesheet}" href="${2:style.css}" type="${3:text/css}" />
 ```
 
-### الوصف:
+---
 
-#### الأمر:
-<span class='command'>جافا سكريبت</span>
-
-#### الكود:
+### 38. جافا سكريبت
+#### الأمر: `جافا سكريبت`
 ```html
 <script type="${1|text/javascript,module|}">
     ${2:// اكتب كود JavaScript هنا}
 </script>
 ```
 
-### الوصف:
+---
 
-#### الأمر:
-<span class='command'>قائمة منسدلة</span>
-
-#### الكود:
+### 39. قائمة منسدلة
+#### الأمر: `قائمة منسدلة`
 ```html
 <select name="${1:selectName}" id="${2:selectId}">
     <option value="${3:option1Value}">${4:الخيار الأول}</option>
@@ -604,44 +370,36 @@ color: beige;
 </select>
 ```
 
-### الوصف:
+---
 
-#### الأمر:
-<span class='command'>خيار</span>
-
-#### الكود:
+### 40. خيار
+#### الأمر: `خيار`
 ```html
 <option value="${1:القيمة}">${2:النص}</option>
 ```
 
-### الوصف:
+---
 
-#### الأمر:
-<span class='command'>تنسيق</span>
-
-#### الكود:
+### 41. تنسيق
+#### الأمر: `تنسيق`
 ```html
 <style>
     ${1:/* اكتب كود CSS هنا */}
 </style>
 ```
 
-### الوصف:
+---
 
-#### الأمر:
-<span class='command'>رابط جافا سكريبت خارجي</span>
-
-#### الكود:
+### 42. رابط جافا سكريبت خارجي
+#### الأمر: `رابط جافا سكريبت خارجي`
 ```html
 <script src="${1:script.js}" type="${2:text/javascript}"></script>
 ```
 
-### الوصف:
+---
 
-#### الأمر:
-<span class='command'>قائمة </span>
-
-#### الكود:
+### 43. قائمة
+#### الأمر: `قائمة`
 ```html
 <menu>
     <li>${1:العنصر الأول}</li>
@@ -649,22 +407,18 @@ color: beige;
 </menu>
 ```
 
-### الوصف:
+---
 
-#### الأمر:
-<span class='command'>عنصر قائمة</span>
-
-#### الكود:
+### 44. عنصر قائمة
+#### الأمر: `عنصر قائمة`
 ```html
 <li>${1:العنصر}</li>
 ```
 
-### الوصف:
+---
 
-#### الأمر:
-<span class='command'>صور بحسب مقاس المحدد</span>
-
-#### الكود:
+### 45. صور بحسب مقاس المحدد
+#### الأمر: `صور بحسب مقاس المحدد`
 ```html
 <picture>
     <source srcset="${1:example-large.jpg}" media="(min-width: ${2:800px})">
@@ -673,23 +427,128 @@ color: beige;
 </picture>
 ```
 
-### الوصف:
+---
 
-#### الأمر:
-<span class='command'>زر ادخال صورة</span>
-
-#### الكود:
+### 46. زر إدخال صورة
+#### الأمر: `زر إدخال صورة`
 ```html
 <input type="file" id="${1:poster}" name="${2:poster}" accept="${3:image/png, image/jpeg}" />
 ```
 
-### الوصف:
+---
 
-#### الأمر:
-<span class='command'>زر ادخال ملف PDF</span>
-
-#### الكود:
+### 47. زر إدخال ملف PDF
+#### الأمر: `زر إدخال ملف PDF`
 ```html
 <input type="file" id="${1:pdfFile}" name="${2:pdfFile}" accept="${3:application/pdf}" />
 ```
 
+---
+
+### 48. قائمة تعريفات
+#### الأمر: `قائمة تعريفات`
+```html
+<dl>
+  <dt>${1:العنوان}</dt>
+  <dd>${2:الوصف}</dd>
+</dl>
+```
+
+---
+
+### 49. نص مائل
+#### الأمر: `نص مائل`
+```html
+<em>${1:نص مائل هنا}</em>
+```
+
+---
+
+### 50. نص يتوسطه خط
+#### الأمر: `نص يتوسطه خط`
+```html
+<del>${1:النص}</del>
+```
+
+---
+
+### 51. نص مسطر
+#### الأمر: `نص مسطر`
+```html
+<ins>${1:النص المضاف}</ins>
+```
+
+---
+
+### 52. قالب نموذج شخصي
+#### الأمر: `قالب نموذج شخصي`
+```html
+<form action="${1:/action_page.php}" method="${2:post}">
+ <fieldset>
+  <legend>${3:Personalia}:</legend>
+  <label for="fname">${4:First name}:</label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <label for="lname">${5:Last name}:</label>
+  <input type="text" id="lname" name="lname"><br><br>
+  <label for="email">${6:Email}:</label>
+  <input type="email" id="email" name="email"><br><br>
+  <label for="birthday">${7:Birthday}:</label>
+  <input type="date" id="birthday" name="birthday"><br><br>
+  <input type="submit" value="${8:Submit}">
+ </fieldset>
+</form>
+```
+
+---
+
+### 53. حقل تاريخ
+#### الأمر: `حقل تاريخ`
+```html
+<input type="date" id="${1:birthday}" name="${2:birthday}" />
+```
+
+---
+
+### 54. قائمة شريط تنقل
+#### الأمر: `قائمة شريط تنقل`
+```html
+<nav>
+  <a href="${1:/html/}">${2:الرابط الأول}</a>
+  <a href="${3:/css/}">${4:الرابط الثاني}</a>
+</nav>
+```
+
+---
+
+### 55. خريطة صورة
+#### الأمر: `خريطة صورة`
+```html
+<img src="${1:workplace.jpg}" alt="${2:Workplace}" usemap="#${3:workmap}" width="${4:400}" height="${5:379}">
+<map name="${3:workmap}">
+  <area shape="rect" coords="${6:34,44,270,350}" alt="${7:Computer}" href="${8:computer.htm}">
+  <area shape="rect" coords="${9:290,172,333,250}" alt="${10:Phone}" href="${11:phone.htm}">
+  <area shape="circle" coords="${12:337,300,44}" alt="${13:Cup of coffee}" href="${14:coffee.htm}">
+</map>
+```
+
+---
+
+### 56. شريط نسبة التقدم
+#### الأمر: `شريط نسبة التقدم`
+```html
+<label for="${1:file}">${2:وصف التقدم}:</label>
+<progress id="${1:file}" value="${3:القيمة الحالية}" max="${4:القيمة القصوى}">${5:النسبة المئوية}</progress>
+```
+
+---
+
+### 57. مقياس نسبة
+#### الأمر: `مقياس نسبة`
+```html
+<meter id="${1:meterId}" value="${2:القيمة الحالية}" min="${3:القيمة الدنيا}" max="${4:القيمة القصوى}">${5:الوصف هنا}</meter>
+```
+
+---
+
+## ملاحظات
+شكرا جزيلا بالتوفيق
