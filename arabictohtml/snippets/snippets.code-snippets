@@ -449,6 +449,56 @@
         "description": "إضافة عنصر عنوان (h1) مع تنسيق HTML",
         "scope": "html"
     },
+    "h2:html": {
+        "prefix": "نص صغير جدا",
+        "body": [
+            "<h2 style=\"font-size: ${1:24}px; color: ${2:black}; text-align: ${3:left};\">",
+            "    ${4:عنوان هنا}",
+            "</h2>"
+        ],
+        "description": "إضافة عنصر عنوان (H2) مع تنسيق HTML",
+        "scope": "html"
+    },
+    "h3:html": {
+        "prefix": "نص صغير",
+        "body": [
+            "<h3 style=\"font-size: ${1:20}px; color: ${2:black}; text-align: ${3:left};\">",
+            "    ${4:عنوان هنا}",
+            "</h3>"
+        ],
+        "description": "إضافة عنصر عنوان (H3) مع تنسيق HTML",
+        "scope": "html"
+    },
+    "h4:html": {
+        "prefix": "نص عادي",
+        "body": [
+            "<h4 style=\"font-size: ${1:18}px; color: ${2:black}; text-align: ${3:left};\">",
+            "    ${4:عنوان هنا}",
+            "</h4>"
+        ],
+        "description": "إضافة عنصر عنوان (H4) مع تنسيق HTML",
+        "scope": "html"
+    },
+    "h5:html": {
+        "prefix": "نص كبير",
+        "body": [
+            "<h5 style=\"font-size: ${1:16}px; color: ${2:black}; text-align: ${3:left};\">",
+            "    ${4:عنوان هنا}",
+            "</h5>"
+        ],
+        "description": "إضافة عنصر عنوان (H5) مع تنسيق HTML",
+        "scope": "html"
+    },
+    "h6:html": {
+        "prefix": "نص كبير جدا",
+        "body": [
+            "<h6 style=\"font-size: ${1:14}px; color: ${2:black}; text-align: ${3:left};\">",
+            "    ${4:عنوان هنا}",
+            "</h6>"
+        ],
+        "description": "إضافة عنصر عنوان (H6) مع تنسيق HTML",
+        "scope": "html"
+    },
     "link:html": {
         "prefix": "رابط ملف التنسيق",
         "body": [
@@ -663,6 +713,109 @@
             "<progress id=\"${1:file}\" value=\"${3:القيمة الحالية}\" max=\"${4:القيمة القصوى}\">${5:النسبة المئوية}</progress>"
         ],
         "description": "إضافة شريط تقدم (progress) مع وسم label في HTML",
+        "scope": "html"
+    },
+    "s:html": {
+        "prefix": "نص مشطوب",
+        "body": [
+            "<s>${1:النص المشطوب}</s>"
+        ],
+        "description": "إضافة نص مشطوب باستخدام عنصر s في HTML",
+        "scope": "html"
+    },
+    "search:html": {
+        "prefix": "نموذج بحث",
+        "body": [
+            "<search>",
+            "  <form>",
+            "    <input name=\"${1:fsrch}\" id=\"${2:fsrch}\" placeholder=\"${3:Search here}\" />",
+            "  </form>",
+            "</search>"
+        ],
+        "description": "إضافة عنصر search مع نموذج إدخال للبحث",
+        "scope": "html"
+    },
+    "svg:circle": {
+        "prefix": "دائرة",
+        "body": [
+            "<svg width=\"${1:100}\" height=\"${2:100}\">",
+            "  <circle cx=\"${3:50}\" cy=\"${4:50}\" r=\"${5:40}\" stroke=\"${6:green}\" stroke-width=\"${7:4}\" fill=\"${8:yellow}\" />",
+            "</svg>"
+        ],
+        "description": "إضافة عنصر SVG يحتوي على دائرة",
+        "scope": "html"
+    },
+    "svg:rect": {
+        "prefix": "مربع",
+        "body": [
+            "<svg width=\"${1:100}\" height=\"${2:100}\">",
+            "  <rect x=\"${3:10}\" y=\"${4:10}\" width=\"${5:80}\" height=\"${6:80}\" stroke=\"${7:blue}\" stroke-width=\"${8:4}\" fill=\"${9:red}\" />",
+            "</svg>"
+        ],
+        "description": "إضافة عنصر SVG يحتوي على مربع",
+        "scope": "html"
+    },
+    "svg:triangle": {
+        "prefix": "مثلث",
+        "body": [
+            "<svg width=\"${1:100}\" height=\"${2:100}\">",
+            "  <polygon points=\"${3:50,15} ${4:90,85} ${5:10,85}\" stroke=\"${6:black}\" stroke-width=\"${7:2}\" fill=\"${8:blue}\" />",
+            "</svg>"
+        ],
+        "description": "إضافة عنصر SVG يحتوي على مثلث",
+        "scope": "html"
+    },
+    "iframe:html": {
+        "prefix": "إطار مضمّن",
+        "body": [
+            "<iframe src=\"${1:https://www.example.com}\" width=\"${2:600}\" height=\"${3:400}\" frameborder=\"${4:0}\" allowfullscreen></iframe>"
+        ],
+        "description": "إضافة عنصر iframe لعرض محتوى مضمّن",
+        "scope": "html"
+    },
+    "embed:html": {
+        "prefix": "عنصر مضمّن",
+        "body": [
+            "<embed type=\"${1:image/jpg}\" src=\"${2:pic_trulli.jpg}\" width=\"${3:300}\" height=\"${4:200}\" />"
+        ],
+        "description": "إضافة عنصر embed لعرض محتوى مضمّن مثل صورة أو ملف",
+        "scope": "html"
+    },
+    "output:html": {
+        "prefix": "عنصر إخراج",
+        "body": [
+            "<form oninput=\"${1:x.value=parseInt(a.value)+parseInt(b.value)}\">",
+            "  <input type=\"range\" id=\"${2:a}\" value=\"${3:50}\">",
+            "  +<input type=\"number\" id=\"${4:b}\" value=\"${5:25}\">",
+            "  =<output name=\"${6:x}\" for=\"${7:a b}\"></output>",
+            "</form>"
+        ],
+        "description": "إضافة عنصر output مع نموذج إدخال لإجراء العمليات الحسابية",
+        "scope": "html"
+    },
+    "q:html": {
+        "prefix": "اقتباس قصير",
+        "body": [
+            "<q>${1:الاقتباس }</q>"
+        ],
+        "description": "إضافة عنصر q لاقتباس قصير في HTML",
+        "scope": "html"
+    },
+    "abbr:html": {
+        "prefix": "تليمح",
+        "body": [
+            "<abbr title=\"${1:التلميح}\">${2:النصر الظاهري}</abbr>"
+        ],
+        "description": "إضافة عنصر abbr لعرض اختصار مع عنوان توضيحي",
+        "scope": "html"
+    },
+    "date:min-max": {
+        "prefix": "تاريخ مع حد",
+        "body": [
+            "<label for=\"${1:dateInput}\">${2:اختر التاريخ}:</label>",
+            "<input type=\"date\" id=\"${1:dateInput}\" name=\"${1:dateInput}\" min=\"${3:2023-01-01}\" max=\"${4:2023-12-31}\">"
+        ],
+        "description": "إضافة حقل إدخال لتحديد التاريخ مع حد أدنى وحد أقصى",
         "scope": "html"
     }
 }
